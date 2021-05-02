@@ -13,8 +13,11 @@ A repository for an article on
 npm install
 ```
 
-3. Replace the placeholders - `YOUR_EXTERNAL_BUCKET_NAME` with the actual value
-   for the bucket you want to import
+3. Replace the placeholders:
+
+- `YOUR_EXTERNAL_BUCKET_NAME` with the actual value for the bucket you want to
+  import
+- `SOME_OTHER_REGION` with the name of the region the existing bucket is in
 
 4. Synth the stack and look at the console.log output
 

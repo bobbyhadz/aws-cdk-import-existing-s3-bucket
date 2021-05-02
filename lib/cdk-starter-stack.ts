@@ -15,6 +15,7 @@ export class CdkStarterStack extends cdk.Stack {
     console.log('bucket name 👉', importedBucketFromName.bucketName);
     console.log('bucket arn 👉', importedBucketFromName.bucketArn);
 
+    // 👇 using methods on the imported bucket
     importedBucketFromName.grantRead(new iam.AccountRootPrincipal());
 
     const importedBucketFromArn = s3.Bucket.fromBucketArn(
@@ -23,11 +24,12 @@ export class CdkStarterStack extends cdk.Stack {
       'arn:aws:s3:::YOUR_EXTERNAL_BUCKET_NAME',
     );
 
-    const importedBucketfromAttributes = s3.Bucket.fromBucketAttributes(
+    const importedBucketFromAttributes = s3.Bucket.fromBucketAttributes(
       this,
       'imported-bucket-from-attributes',
       {
         bucketArn: 'arn:aws:s3:::YOUR_EXTERNAL_BUCKET_NAME',
+        region: 'SOME_OTHER_REGION',
       },
     );
   }
