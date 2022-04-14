@@ -3,6 +3,8 @@
 A repository for an article on
 [bobbyhadz.com](https://bobbyhadz.com/blog/aws-cdk-import-existing-s3-bucket)
 
+> If you use CDK v1, switch to the cdk-v1 branch
+
 ## How to Use
 
 1. Clone the repository
@@ -22,5 +24,5 @@ npm install
 4. Synth the stack and look at the console.log output
 
 ```bash
-npx cdk synth
+npx aws-cdk synth
 ```
